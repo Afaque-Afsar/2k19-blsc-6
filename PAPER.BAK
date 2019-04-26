@@ -1,0 +1,184 @@
+/*void main()
+{
+int a,b,i1,i2,i3,i4,i5,z;
+clrscr();
+printf("enter a 1st number ");
+scaddnf("%d",&a);
+printf("enter a 2nd number ");
+scanf("%d",&b);
+i1=a+b;
+printf("\n\nsum of numbers  %d",i1);
+i2=a*b;
+printf("\nproduct of numbers %d",i2);
+i3=a-b;
+printf("\ndifferenc of number %d",i3);
+i4=a/b;
+printf("\ndivision of numbers %d",i4);
+i5=a%b;
+printf("\nremainder of numbers %d",i5);
+printf("\n------------------------------");
+z=i1+i2+i3+i4+i5;
+printf("\nTotal            %d",z);
+getch();
+} */
+/*void main()
+{
+long int a,b,c,d,e;
+clrscr();
+printf("please enter a basic pay");
+scanf("%d",&a);
+printf("\n\t\tPAY SLIP");
+printf("\nBasic pay %ld",a);
+b=40*a*100;
+printf("\n house rant (40%) %ld",b);
+c=18*a/100;
+printf("\nMadical Allounce (18%)%ld",c);
+d=15*a/100;
+printf("\ncomputer Allounce (15%),%ld",d);
+printf("\n--------------------------------");
+e=a+b+c+d ;
+printf("\nTotel                  %ld",e);
+getch();
+} */
+/*void main()
+{
+int a,b,c;
+clrscr();
+a=3;b=5;c=4;
+c=a*b+c;
+a=b+c;
+b=a+c;
+printf("A = %d b = %d c = %d",c,b,a);
+getch();
+}*/
+/*void main()
+{
+int x=2,y=10,p;
+clrscr();
+for(p=0;p<4;p++)
+{
+
+x=x+y;
+x++;
+y++;
+printf("\nx=%d y=%d",x,y);
+}
+getch();
+} */
+/*void main()
+{
+int x=2,y=4,z=3;
+clrscr();
+y=(x*(y-x));
+z=x+y;
+x=y+z;
+printf("x= %d y=%d z=%d",x,y,z);
+getch();
+}*/
+/*void main()
+{
+int k,c,x=2,z=3;
+clrscr();
+for(k=0;k<=5;k++)
+{
+c=x*x;z=z+3;
+if(c>5)
+c=c+4;
+printf("\n%d*%d=%d",x,z,c);
+}
+getch();
+} */
+/*void main()
+{
+int a;
+char ch;
+clrscr();
+printf("enter a charecter ");
+scanf("%c",&ch);
+a=ch;
+printf("\n ASCII value of charecter is %d ",a);
+getch();
+} */
+/*void main()
+{
+int i=1;
+clrscr();
+do
+{
+printf("\nafsar");
+i=i++;
+}
+while(i<=10);
+getch();
+} */
+/*void main()
+{
+int l=0,w=0,s=0;
+char ch;
+clrscr();
+while((ch=getch())!='q')
+{
+printf("%c",ch);
+l=l++;
+if(ch=' ')
+{
+w=w++;
+}
+if(ch=='.')
+{
+s=s++;
+}
+}
+printf("\nTotal character is %d",l);
+printf("\nTotal words is %d",w);
+printf("\nTotal sentence is %d",s);
+ch=getch();
+} */
+/*void main()
+{
+int a,b,c,d,e;
+clrscr();
+printf("enter 1st number ");
+scanf("%d",&a);
+printf("enter a 2nd number ");
+scanf("%d",&b);
+printf("enter a 3rd number ");
+scanf("%d",&c);
+printf("enter a 4th mumber ");
+scanf("%d",&d);
+printf("enter a 5th number ");
+scanf("%d",&e);
+printf("%d%d%d%d%d",e,d,c,b,a);
+getch();
+} */
+/*void main()
+{
+long int a,n,s,l=0,i;
+clrscr();
+printf("enter any no ?");
+scanf("%ld",&a);
+s=a;
+for(i=1;i<10;i++)
+{
+printf("enter the number ");
+scanf("%ld",&n);
+if(n<s)
+s=n;
+if(n>l)
+l=n;
+}
+printf("smallest=%ld",s);
+printf("largest=%ld",l);
+getch();
+} */
+void main()
+{
+int a;
+char ch;
+clrscr();
+printf("enter a character ");
+scanf("%d",&ch);
+A=ch;
+printf("ASCII character is %d",A);
+getch();
+}
