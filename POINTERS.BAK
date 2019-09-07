@@ -1,0 +1,134 @@
+#include<stdio.h>
+void main ()
+{
+int t;
+clrscr();
+printf("Q1write\nQ2Read\nQn3Append\nQ4Search\nQ5search by name\n");
+printf("\nEnter your question ");
+scanf("%d",&t);
+switch(t)
+{
+case 1:
+{
+FILE *ptr;
+int sno,phy,chem,tot;
+char  name[20];
+clrscr();
+ptr=fopen("ali.txt" ,"w");
+printf(" student name:\n ");
+scanf("%s",&name);
+printf(" Seat No:\n");
+scanf("%d",&sno);
+printf("\nEnter the marks of physics:");
+scanf("%d",&phy);
+printf("\n the marks of chemistry:");
+scanf("%d",&chem);
+tot=phy+chem;
+printf("\ntotal marks=%d",tot);
+fprintf(ptr,"%s %d %d %d %d\n ",name,sno,phy,chem,tot);
+fclose(ptr);
+}
+break;
+case 2:
+{
+FILE *ptr;
+int sno,phy,chem,tot;
+char  name[20];
+clrscr();
+
+ptr=fopen("ali.txt" ,"r");
+while (fscanf(ptr,"%s %d %d %d %d\n ",&name,&sno,&phy,&chem,&tot) !=EOF)
+{
+printf(" student name:%s\n ",name);
+printf(" Seat No:%d\n",sno);
+printf("\nEnter the marks of physics:%d",phy);
+printf("\n the marks of chemistry:%d",chem);
+tot=phy+chem;
+printf("\n marks=%d",tot);
+}
+fclose(ptr);
+}
+break;
+case 3:
+{
+FILE *ptr;
+int sno,phy,chem,tot;
+char  name[20];
+clrscr();
+ptr=fopen("ali.txt" ,"a");
+printf(" student name:\n ");
+scanf("%s",&name);
+printf(" Seat No:\n");
+scanf("%d",&sno);
+printf("\nEnter the marks of physics:");
+scanf("%d",&phy);
+printf("\n the marks of chemistry:");
+scanf("%d",&chem);
+tot=phy+chem;
+printf("\ntotal marks=%d",tot);
+fprintf(ptr,"%s %d %d %d %d\n ",name,sno,phy,chem,tot);
+fclose(ptr);
+}
+break;
+case 4:
+{
+FILE *ptr;
+int ssno, sno,phy,chem,tot;
+char  name[20];
+clrscr();
+
+ptr=fopen("ali.txt" ,"r");
+printf("Enter seat no.");
+scanf("%d",&ssno);
+
+while (fscanf(ptr,"%s %d %d %d %d\n ",&name,&sno,&phy,&chem,&tot) !=EOF)
+{
+ if(ssno==sno)
+{
+
+printf(" student name:%s\n ",name);
+
+printf(" Seat No:%d\n",sno);
+printf("\nEnter the marks of physics:%d",phy);
+printf("\n the marks of chemistry:%d",chem);
+tot=phy+chem;
+printf("\n marks=%d",tot);
+
+}
+}
+fclose(ptr);
+}
+break;
+case 5:
+{
+FILE *ptr;
+int  sno,phy,chem,tot,no;
+char  name[20];
+char sname[15];
+clrscr();
+
+ptr=fopen("ali.txt" ,"r");
+printf("Enter your name ? ");
+scanf("%s",&sname);
+
+while (fscanf(ptr,"%s %d %d %d %d\n ",&name,&sno,&phy,&chem,&tot) !=EOF)
+{
+no=strcmp(name,sname);
+ if(no==0)
+{
+
+printf(" student name:%s\n ",name);
+
+printf(" Seat No:%d\n",sno);
+printf("\nEnter the marks of physics:%d",phy);
+printf("\n the marks of chemistry:%d",chem);
+tot=phy+chem;
+printf("\n marks=%d",tot);
+}
+}
+fclose(ptr);
+}
+break;
+}
+getch();
+}
